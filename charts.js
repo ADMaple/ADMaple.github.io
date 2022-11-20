@@ -158,6 +158,7 @@ var chartArray = metadata.filter(chartObj => chartObj.date == ddates);
 
 // Create a variable that holds the first sample in the array.
 var chartResult = chartArray[0];
+console.log(chartArray)
 
 // 6. Create variables that hold the chartResults data.
 var ue_rates = chartResult.unemployment;
@@ -181,8 +182,6 @@ var barData = [{
   orientation: "v"},
   
 ];
-
-
 // Create the layout for the bar chart. 
 var barLayout = {
  title: "Unemployment vs Fed Fund and Inflation Rates",
@@ -260,9 +259,7 @@ var barLayout = {
 
 // Use Plotly to plot the data with the layout. 
  // call updatePlotly 
-Plotly.restyle("bar", "y", [y], barLayout);
-
-
+Plotly.restyle("bar3", "y", [y], barLayout);
 });
 
 }
